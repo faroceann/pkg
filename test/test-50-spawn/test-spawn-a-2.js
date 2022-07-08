@@ -2,7 +2,6 @@
 
 'use strict';
 
-var path = require('path');
 var spawn = require('child_process').spawn;
 
 if (process.send) {

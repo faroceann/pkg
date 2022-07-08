@@ -77,6 +77,8 @@ if (NODE_VERSION_MAJOR < 12 || require('worker_threads').isMainThread) {
 if (process.send) {
   // if process.send is set, it means the process was forked (child process),
   // and the runtime file is the third argument
+  //
+  // eslint-disable-next-line prefer-destructuring
   process.argv[1] = process.argv[2];
   process.argv.splice(2, 1);
 } else if (process.env.PKG_EXECPATH === EXECPATH) {
